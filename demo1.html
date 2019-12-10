@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1{color: red}
+    </style>
+  请输入内容：<input type="text" oninput="input_change(this)"/>
+  <h1></h1> 
+  <!---内容：在输入框中输入的内容动态展示好标签中-->
+  <script>
+      var x=1
+  //通过javaScript实现
+  function input_change(input){
+      console.log(++x)
+      //将Input的值赋给h1的innerHtml属性
+      var h1 = document.querySelector("h1");
+      h1.innerHTML=input.value
+  }
+  </script> 
+</body>
+</html>

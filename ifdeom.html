@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-------引入vue的核心外部文件--->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="lin" name="star" v-model="name"/>林书豪
+        <input type="radio" value="zhu" name="star" v-model="name"/>朱一龙
+        <input type="radio" value="qiao" name="star" v-model="name"/>乔碧萝殿下
+        <img v-if="name=='lin'"style="width:200px;height: 150px;" src="http://x0.ifengimg.com/res/2019/4F29A1416C1AED2443685354EA9193AD21AF3227_size362_w2000_h1332.jpeg"/>
+        <img v-else-if="name=='zhu'" style="width:200px;height: 150px;" src="http://b-ssl.duitang.com/uploads/item/201810/17/20181017113243_odgvs.thumb.700_0.jpg"/>
+        <img v-else-if="name=='qiao'" style="width:200px;height: 150px;" src="http://pics2.baidu.com/feed/37d3d539b6003af3ecbdbee87a7726591138b692.jpeg?token=310eb673f7b60d1202b3788b3e83ae11&s=77219B470268311F50B5DCA303009005"/>
+        <img v-else style="width:200px;height: 150px;" src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1212/10/c1/16491670_1355126816487.jpg"/>
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show: 'false',
+                name:""
+            }
+        });
+    </script>
+</body>
+</html>
